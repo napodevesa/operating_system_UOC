@@ -25,7 +25,7 @@ free_memory(struct fibo_entry *table, int size)
 {
 /* Your code starts here */
 
-free(*table)
+free();
 /* Your code ends here */
 }
 
@@ -48,7 +48,7 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
 
 /* Your code starts here */
     
-    int i, t1 = 0, t2 = 1, nextTerm
+    int t1 = 0, t2 = 1, nextTerm;
     printf("Enter the number of terms: ");
     scanf("%d", &n);
     printf("Fibonacci Series: ");
