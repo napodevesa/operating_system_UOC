@@ -36,6 +36,7 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
   int i;
   struct fibo_entry *fibo_table;
 
+
   if (argc != 2)
     panic ("wrong parameters");
 
@@ -45,9 +46,11 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
   if (n > LIMIT)
     panic ("n too big");
 
+
 /* Your code starts here */
-    
- struct fibo_entry* s = (struct fibo_entry*) malloc(sizeof(struct fibo_entry));
+
+  //memoria dinámica
+fibo_table=malloc(sizeof(struct fibo_entry));
 
 
 /* Your code ends here */
