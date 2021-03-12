@@ -1,5 +1,5 @@
-#include <stdlib.h>
-#include <errno.h>
+#include <stdlib.h> // gestión de memoria dinámica
+#include <errno.h> // macros que presentan un informe de error
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -16,7 +16,7 @@ struct fibo_entry
 void
 panic (char *m)
 {
-  fprintf (stderr, "%s\n", m);
+  fprintf (stderr, "%s\n", m); //  stderr=Error output
   exit (0);
 }
 
@@ -30,7 +30,8 @@ free_memory(struct fibo_entry *table, int size)
 }
 
 int
-main (int argc, char *argv[])
+main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc=arrays of pointers
+
 {
   int n;
   int i;
@@ -39,7 +40,7 @@ main (int argc, char *argv[])
   if (argc != 2)
     panic ("wrong parameters");
 
-  n = atoi (argv[1]);
+  n = atoi (argv[1]);         //atoi =c onverts the string argument str to an integer (type int).
   if (n < 2)
     panic ("n too small");
   if (n > LIMIT)
