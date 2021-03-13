@@ -24,13 +24,12 @@ void
 free_memory(struct fibo_entry *table, int size)
 {
 /* Your code starts here */
-     free(&table[size]);
-    
+    free(&table[size]); 
 /* Your code ends here */
 }
 
 int
-main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc=arrays of pointers
+main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argv[]=arrays of pointers
 
 {
   int n;
@@ -49,9 +48,10 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
 
 
 /* Your code starts here */
-
   //dinamic memory
 fibo_table = malloc(sizeof(struct fibo_entry));
+
+
 
 int n1=0,n2=1,n3=0;
   
@@ -66,10 +66,13 @@ for (i=2;i<=LIMIT;i++)
     {
     n3= n1+n2;
     fibo_table[i].lli = n3;
-    //sprintf(fibo_table[i].str, "%d", n3);
     n1=n2; 
     n2=n3;
+
     }
+
+  
+
 
 /*
 fibo_table[0].lli = 1;
@@ -79,9 +82,7 @@ fibo_table[3].lli = 3;
 fibo_table[4].lli = 5;
 fibo_table[5].lli = 8;
 fibo_table[6].lli = 13;
-*/
-
-
+*************************
 fibo_table[1].str = "1";
 fibo_table[2].str = "1";
 fibo_table[3].str = "2";
@@ -89,8 +90,7 @@ fibo_table[4].str = "3";
 fibo_table[5].str = "5";
 fibo_table[6].str = "8";
 fibo_table[7].str= "13";
-
-
+*/
 
 /* Your code ends here */
 
