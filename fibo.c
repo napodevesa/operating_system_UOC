@@ -52,7 +52,7 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
   //memoria dinámica
 fibo_table=malloc(sizeof(struct fibo_entry));
 
-fibo_table2 = malloc(sizeof(char fibo_entry));
+//fibo_table= malloc(sizeof((char)));
 
 
 /* Your code ends here */
