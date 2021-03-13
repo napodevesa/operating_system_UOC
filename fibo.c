@@ -25,6 +25,7 @@ free_memory(struct fibo_entry *table, int size)
 {
 /* Your code starts here */
      free(&table[size]);
+    
 /* Your code ends here */
 }
 
@@ -51,12 +52,14 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argc
 
   //memoria dinámica
 fibo_table = malloc(sizeof(struct fibo_entry));
-//fibo_table->lli = malloc(sizeof(long));
-//fibo_table->lli = (unsigned long long int*)malloc(n*sizeof(unsigned long long int));
 
-fibo_table->str = malloc(sizeof(char));
-//fibo_table->lli = fibo_table->n ;
-  
+fibo_table[0].lli = 1;
+fibo_table[1].lli = 1;
+fibo_table[2].lli = 2;
+fibo_table[3].lli = 3;
+fibo_table[4].lli = 5;
+fibo_table[5].lli = 8;
+fibo_table[6].lli = 13;
 
 
 /* Your code ends here */
