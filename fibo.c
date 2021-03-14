@@ -82,7 +82,7 @@ fibo_table[3].lli = 3;
 fibo_table[4].lli = 5;
 fibo_table[5].lli = 8;
 fibo_table[6].lli = 13;
-*************************
+*/
 fibo_table[1].str = "1";
 fibo_table[2].str = "1";
 fibo_table[3].str = "2";
@@ -90,7 +90,7 @@ fibo_table[4].str = "3";
 fibo_table[5].str = "5";
 fibo_table[6].str = "8";
 fibo_table[7].str= "13";
-*/
+
 
 /* Your code ends here */
 
