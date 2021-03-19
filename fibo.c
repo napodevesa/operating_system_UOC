@@ -24,6 +24,12 @@ void
 free_memory(struct fibo_entry *table, int size)
 {
 /* Your code starts here */
+    for (int i = 0; i < LIMIT; ++i)
+    {
+      free (&table[i].lli);
+      free (&table[i].str);
+    }
+
     free(&table[size]);   
    
 /* Your code ends here */
@@ -51,11 +57,20 @@ main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argv
 /* Your code starts here */
   //dinamic memory
 
-fibo_table = malloc(sizeof(struct fibo_entry));
 
-fibo_table[LIMIT].lli = (unsigned long long)malloc(sizeof(unsigned long long) * log10(argc));
 
-fibo_table[LIMIT].str = (char*) malloc (sizeof(char) * log10(fibo_table->lli));
+
+fibo_table = (struct fibo_entry*)malloc((LIMIT)*sizeof(struct fibo_entry));
+
+if(fibo_table ==NULL)
+  panic("malloc");
+
+fibo_table[0].n =0;
+fibo_table[0].lli =0;
+fibo_table[0].str ="0";
+fibo_table[1].lli =1;
+fibo_table[1].str ="1";
+
  
 int n1=0,n2=1,n3=0;
   
@@ -63,9 +78,10 @@ int n1=0,n2=1,n3=0;
 for (i=0;i<=LIMIT;i++)
 
     {
+      int j;
 
-   fibo_table[i].n = fibo_table[i].n  + i;
-
+   fibo_table[i].n =  i;
+  
     }
 
   //fibo formula
@@ -73,10 +89,17 @@ for (i=0;i<=LIMIT;i++)
   
 for (i=2;i<=LIMIT;i++)
     {
+    
+    int j;
 
     n3= n1+n2;
     fibo_table[i].lli = n3;
-    sprintf(fibo_table->str,"%d", fibo_table->n);
+    j=log10(fibo_table[i].lli);
+    fibo_table[i].str = malloc ((j)*sizeof(char));
+    if (fibo_table[i].str==NULL)
+    panic ("malloc");
+
+    sprintf(fibo_table[i].str, "%lld", fibo_table[i].lli);
     n1=n2; 
     n2=n3;
 
