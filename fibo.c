@@ -24,17 +24,22 @@ void
 free_memory(struct fibo_entry *table, int size)
 {
 
-/* Your code starts here */
-   /*
+///* Your code starts here */
+   
+    
+
     for (int i = 0; i < LIMIT; ++i)
     {
-      free (&table[i].lli);
-      free (&table[i].str);
+    
+      free (table[i].str);
     }
 
-    free(&table[size]);   
+free(table);   
    
-/* Your code ends here */
+
+
+///* Your code ends here */
+
 
 }
 
@@ -120,6 +125,11 @@ for (i=2;i<=LIMIT;i++)
     }
 
   free_memory(fibo_table, n);
+
+
+
+  printf ("%d %d %llu %s\n", fibo_table[4].n, fibo_table[4].lli,
+              fibo_table[4].str);
 
   return 0;
 }
