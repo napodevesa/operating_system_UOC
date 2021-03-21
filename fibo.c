@@ -29,7 +29,8 @@ free_memory(struct fibo_entry *table, int size)
   for (int i = 0; i < size; ++i)
     {  
     
-    
+    free(table[i].str);
+
     }
 
 
@@ -80,7 +81,7 @@ fibo_table[1].str ="1";
 int n1=0,n2=1,n3=0;
   
 //counter
-for (i=0;i<=LIMIT;i++)
+for (i=0;i<=n;i++)
 
     {
 
@@ -89,7 +90,7 @@ for (i=0;i<=LIMIT;i++)
     }
 
 //fibo formula
-for (i=2;i<=LIMIT;i++)
+for (i=2;i<=n;i++)
     {
     
     int j;
