@@ -33,6 +33,7 @@ free_memory(struct fibo_entry *table, int size)
     free(table[i].str);
 
     }
+
   free(table);   
 
 ///* Your code ends here */
@@ -120,8 +121,6 @@ for (i=2;i<=n;i++)
     }
 
   free_memory(fibo_table, n);
-
-
 
   printf ("%d %llu %s\n", fibo_table[4].n, fibo_table[4].lli, fibo_table[4].str);
 
