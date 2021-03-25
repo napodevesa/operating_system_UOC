@@ -39,10 +39,9 @@ free_memory(struct fibo_entry *table, int size)
   
   }
   free(table);
-   
-/* Your code ends here */
-
+  
 }
+/* Your code ends here */
 
 int
 main (int argc, char *argv[]) //argc=contains the inputs/num of arguments / argv[]=arrays of pointers
@@ -72,48 +71,40 @@ if(fibo_table ==NULL)
   panic("malloc");
 
 //set values input
+int n1=0,n2=1,n3=0; 
 
-int n1=0,n2=1,n3=0;
-  
-
-for (i=0; i<2;i++)
-
- {
+for (i=0; i<2;i++){
 
   fibo_table[i].n =  i;
   fibo_table[i].lli =  i;
 
+}
+
+
+for (i=2;i<=n;i++){
+    
+  int j;
+  fibo_table[i].n =  i;
+  n3= n1+n2;
+  fibo_table[i].lli = n3;
+
+
+  n1=n2; 
+  n2=n3;
+
+  j = log10(fibo_table[i].lli) + 1 ;
+
+  fibo_table[i].str = (char*) malloc (( j + 1) * sizeof(char));    
+  sprintf(fibo_table[i].str, "%llu", fibo_table[i].lli);
+
+
+  fibo_table[0].str = (char*) malloc (( j + 1) * sizeof(char));
+  sprintf(fibo_table[0].str, "%d", 0);
+
+  fibo_table[1].str = (char*) malloc (( j + 1) * sizeof(char));
+  sprintf(fibo_table[1].str, "%d", 1);
+
   }
-
-
-for (i=2;i<=n;i++)
-
-    {
-    
-    int j;
-  
-    
-    fibo_table[i].n =  i;
-    n3= n1+n2;
-    fibo_table[i].lli = n3;
-
-
-    n1=n2; 
-    n2=n3;
-
-    j = log10(fibo_table[i].lli) + 1 ;
-
-    fibo_table[i].str = (char*) malloc (( j + 1) * sizeof(char));    
-    sprintf(fibo_table[i].str, "%llu", fibo_table[i].lli);
-
-
-    fibo_table[0].str = (char*) malloc (( j + 1) * sizeof(char));
-    sprintf(fibo_table[0].str, "%d", 0);
-
-    fibo_table[1].str = (char*) malloc (( j + 1) * sizeof(char));
-    sprintf(fibo_table[1].str, "%d", 1);
-
-    }
 
 
 /* Your code ends here */
