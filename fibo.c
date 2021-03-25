@@ -126,8 +126,5 @@ for (i=2;i<=n;i++)
 
   free_memory(fibo_table, n);
 
-printf ("%d %llu %s\n", fibo_table[5].n, fibo_table[5].lli,
-              fibo_table[5].str);
-
   return 0;
 }
